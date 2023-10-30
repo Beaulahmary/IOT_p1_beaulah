@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Srk",
+  "editor": "WoWkI_SIM",
+  "parts": [
+    { 
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -129.7,
+      "left": 119.8,
+      "attrs": { "env": "micropython-20231005-v1.21.0" }
+    },
+    { "type": "wokwi-microphone", "id": "mic", "top": -132.18, "left": 330.99, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "mic:2", "esp:GND.1", "green", [ "v0" ] ],
+    [ "mic:1", "esp:D2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
